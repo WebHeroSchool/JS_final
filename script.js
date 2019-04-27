@@ -28,7 +28,6 @@ function getBugNumber(max) {
 };
 function revealCards(cardsArray) {
     cardsArray.forEach(function(item, i, arr) {
-        console.log(item);
         item.classList.toggle('hidden');
     });
     };
@@ -44,7 +43,6 @@ function dealCards () {
 function setBugCard(index) {
     if(david.checked) {
         cardsDavid[index].classList.add('bug'); 
-        console.log(cardsDavid[index]);
     } else if(nina.checked) { 
         cardsNina[index].classList.add('bug');
     } else if(philip.checked) {
@@ -70,7 +68,6 @@ function loadNewGame() {
     cards.forEach(item => item.classList.add('card_reverse'));
     numberOfCards = setNumberOfCards();
     bugNumber = getBugNumber(numberOfCards);
-    console.log(bugNumber)
     dealCards();
     setBugCard(bugNumber);
     bubbles.innerHTML = 'Слухи дошли до меня, что экстрасенс великий ты. Карту выбери с багом,и хорош ли как говорят о тебе ты посмотрим мы.'
